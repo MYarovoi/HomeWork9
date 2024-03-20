@@ -19,7 +19,7 @@ class EmailValidator: TextValidator {
             return "Кількість символів має бути не менше 3"
         }
         
-        if text.count <= 30 {
+        if text.count >= 30 {
             return "Кількість символів має бути менше 30"
         }
         

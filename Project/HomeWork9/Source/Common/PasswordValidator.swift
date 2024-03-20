@@ -19,10 +19,11 @@ class PasswordValidator: TextValidator {
             return "Кількість символів має бути не менше 3"
         }
         
-        if text.count <= 16 {
+        if text.count >= 16 {
             return "Кількість символів має бути менше 16"
         }
         
         return nil
     }
 }
+

@@ -7,16 +7,12 @@
 
 import UIKit
 
-protocol TextStyleProtocol {}
-
-extension TextStyleProtocol {
+protocol TextStyleProtocol {
     
-    func textColor(for type: TextType) -> UIColor {
-        return .green
-    }
+    func textColor(for type: TextType) -> UIColor
 }
 
-class TextStyle : TextStyleProtocol {
+extension TextStyleProtocol {
     
     func textColor(for type: TextType) -> UIColor {
         
@@ -29,4 +25,8 @@ class TextStyle : TextStyleProtocol {
             return .clear
         }
     }
+}
+
+class TextStyle : TextStyleProtocol {
+    
 }
