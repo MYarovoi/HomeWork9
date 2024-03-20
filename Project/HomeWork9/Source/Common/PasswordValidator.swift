@@ -1,5 +1,5 @@
 //
-//  EmailValidator.swift
+//  PasswordValidator.swift
 //  HomeWork9
 //
 //  Created by Mykyta Yarovoi on 20.03.2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class EmailValidator: TextValidator {
+class PasswordValidator: TextValidator {
     
     override func validate(text: String) -> String? {
         
@@ -19,8 +19,8 @@ class EmailValidator: TextValidator {
             return "Кількість символів має бути не менше 3"
         }
         
-        if text.count <= 30 {
-            return "Кількість символів має бути менше 30"
+        if text.count <= 16 {
+            return "Кількість символів має бути менше 16"
         }
         
         return nil
